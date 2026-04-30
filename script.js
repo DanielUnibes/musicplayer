@@ -6,7 +6,7 @@ const audio = document.querySelector('#audio')
 const progress = document.querySelector('.progress')
 const progressContainer = document.querySelector('.progress-container')
 const titulo = document.querySelector('#titulo')
-const capa = document.querySelector('#capa')
+const cover = document.querySelector('#cover')
 
 const songs = ['im so blue for you']
 
@@ -14,10 +14,10 @@ let songIndex = 0
 
 loadSong(songs[songIndex])
 
-function loadSong(song){
+function loadSong(song) {
     titulo.innerText = song
     audio.src = `music/${song}.mp3`
-    capa.src = `images/${song}.jpg`
+    cover.src = `images/${song}.jpg`
 }
 
 function playSong() {
@@ -36,9 +36,44 @@ function pauseSong() {
 
 playBtn.addEventListener('click', () => {
     const isPlaying = musicContainer.classList.contains('play')
-    if (isPlaying){
+    if (isPlaying) {
         pauseSong()
-    } else{
+    } else {
         playSong()
     }
 })
+
+prevBtn.addEventListener('click', prevSong)
+nextBtn.addEventListener('click', nextSong)
+
+function prevSong() {
+    songIndex--
+    if (songIndex < 0) songIndex = songs.length - 1
+    loadSong(songs[songIndex])
+    playSong()
+}
+
+function nextSong() {
+    songIndex++
+    if (songIndex > songs.length - 1) songIndex = 0
+    loadSong(songs[songIndex])
+    playSong()
+}
+
+audio.addEventListener('timeupdate', updateProgress)
+audio.addEventListener('ended', nextSong)
+
+function updateProgress(e) {
+    const { duration, currentTime } = e.srcElement
+    const progressPercent = (currentTime / duration) * 100
+    progress.style.width = `${progressPercent}%`
+}
+
+progressContainer.addEventListener('click', setProgress)
+
+function setProgress(e) {
+    const width = this.clientWidth
+    const clickX = e.offsetX
+    const duration = audio.duration
+    audio.currentTime = (clickX / width) * duration
+}
