@@ -8,7 +8,7 @@ const progressContainer = document.querySelector('.progress-container')
 const titulo = document.querySelector('#titulo')
 const cover = document.querySelector('#cover')
 
-const songs = ['im so blue for you']
+const songs = ['im so blue for you', 'Illegal', 'Maça', 'Orgulho', 'See You Again', 'Hidden in the Sand']
 
 let songIndex = 0
 
