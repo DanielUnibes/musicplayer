@@ -8,16 +8,26 @@ const progressContainer = document.querySelector('.progress-container')
 const titulo = document.querySelector('#titulo')
 const cover = document.querySelector('#cover')
 
-const songs = ['im so blue for you', 'Illegal', 'Maça', 'Orgulho', 'See You Again', 'Hidden in the Sand']
+const songs = [
+  { name: 'im so blue for you', color: '#0000ff', textColor: '#c8c9ff' },
+  { name: 'Illegal',            color: '#5c1a18', textColor: '#f88884' },
+  { name: 'Maça',               color: '#2a4a1a', textColor: '#ffffff' },
+  { name: 'Orgulho',            color: '#4a2a1a', textColor: '#e7ad8f' },
+  { name: 'See You Again',      color: '#555f22', textColor: '#c8ceac' },
+  { name: 'Hidden in the Sand', color: '#3b3b3b', textColor: '#ffffff' },
+]
 
 let songIndex = 0
 
 loadSong(songs[songIndex])
 
 function loadSong(song) {
-    titulo.innerText = song
-    audio.src = `music/${song}.mp3`
-    cover.src = `images/${song}.jpg`
+    titulo.innerText = song.name
+    audio.src = `music/${song.name}.mp3`
+    cover.src = `images/${song.name}.jpg`
+
+    musicContainer.style.backgroundColor = song.color
+    musicContainer.style.color = song.textColor
 }
 
 function playSong() {
