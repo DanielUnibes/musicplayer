@@ -15,6 +15,11 @@ const songs = [
   { name: 'Orgulho',            color: '#4a2a1a', textColor: '#e7ad8f' },
   { name: 'See You Again',      color: '#555f22', textColor: '#c8ceac' },
   { name: 'Hidden in the Sand', color: '#3b3b3b', textColor: '#ffffff' },
+  { name: 'Touch', color: '#3b3b3b', textColor: '#ffffff' },
+  { name: 'Ray Charles - Hit The Road Jack', color: '#3b3b3b', textColor: '#ffffff' },
+  { name: 'lavender', color: '#3b3b3b', textColor: '#ffffff' },
+  { name: 'Nada Vai Me Colocar Pra Baixo', color: '#3b3b3b', textColor: '#ffffff' },
+  { name: 'Mili - Hero', color: '#3b3b3b', textColor: '#ffffff' },
 ]
 
 let songIndex = 0
