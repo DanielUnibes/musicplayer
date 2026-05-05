@@ -11,15 +11,15 @@ const cover = document.querySelector('#cover')
 const songs = [
   { name: 'im so blue for you', color: '#0000ff', textColor: '#c8c9ff' },
   { name: 'Illegal',            color: '#5c1a18', textColor: '#f88884' },
-  { name: 'Maça',               color: '#2a4a1a', textColor: '#ffffff' },
+  { name: 'Maça',               color: '#c56810', textColor: '#ffffff' },
   { name: 'Orgulho',            color: '#4a2a1a', textColor: '#e7ad8f' },
   { name: 'See You Again',      color: '#555f22', textColor: '#c8ceac' },
   { name: 'Hidden in the Sand', color: '#3b3b3b', textColor: '#ffffff' },
-  { name: 'Touch', color: '#3b3b3b', textColor: '#ffffff' },
-  { name: 'Ray Charles - Hit The Road Jack', color: '#3b3b3b', textColor: '#ffffff' },
-  { name: 'lavender', color: '#3b3b3b', textColor: '#ffffff' },
-  { name: 'Nada Vai Me Colocar Pra Baixo', color: '#3b3b3b', textColor: '#ffffff' },
-  { name: 'Mili - Hero', color: '#3b3b3b', textColor: '#ffffff' },
+  { name: 'Touch', color: '#ff938b', textColor: '#ffffff' },
+  { name: 'Hit The Road Jack', color: '#666666', textColor: '#ffffff' },
+  { name: 'lavender', color: '#a17fbd', textColor: '#ffffff' },
+  { name: 'Nada Vai Me Colocar Pra Baixo', color: '#1f1f1f', textColor: '#ffffff' },
+  { name: 'Mili - Hero', color: '#cc9e06', textColor: '#ffffff' },
 ]
 
 let songIndex = 0
